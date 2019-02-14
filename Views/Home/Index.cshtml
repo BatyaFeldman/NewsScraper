@@ -1,0 +1,19 @@
+﻿@using TlsScraper.Api
+@model IEnumerable<Article>
+
+
+    <div class="container" style="margin-top:20px">
+        <img src="http://www.thelakewoodscoop.com/news/wp-includes/images/thelakewoodscoop_logo.png" />
+    </div>
+
+    <div class="container" style="margin-top:40px">
+
+        @foreach (Article article in Model)
+        {
+            <div class="well well-lg">
+                <h1><a target="_blank" href="@article.Url">@article.Title</a></h1>
+                <img src="@article.ImageUrl" style="width:500px;" class="container-fluid" />
+                <h4>@article.Text</h4>
+            </div>
+        }
+    </div>
